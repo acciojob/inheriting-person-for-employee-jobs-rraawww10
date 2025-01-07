@@ -11,7 +11,7 @@
     <script type="text/javascript" src="./script.js">
 </script>
 <script>
-	class Person {
+	window.Person = class Person {
   constructor(name, age) {
     this.name = name;
     this.age = age;
@@ -22,7 +22,7 @@
   }
 }
 
-class Employee extends Person {
+window.Employee = class Employee extends window.Person {
   constructor(name, age, jobTitle) {
     super(name, age);
     this.jobTitle = jobTitle;
@@ -34,15 +34,6 @@ class Employee extends Person {
     );
   }
 }
-
-// Example usage
-const person = new Person("Alice", 30);
-person.greet(); // Output: Hello, my name is Alice, I am 30 years old
-
-const employee = new Employee("Bob", 40, "Software Engineer");
-employee.greet(); // Output: Hello, my name is Bob, I am 40 years old
-employee.jobGreet(); // Output: Hello, my name is Bob, I am 40 years old, and my job title is Software Engineer
-
 
 </script>
 </body>
